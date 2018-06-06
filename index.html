@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="contact.js"></script>
+    <title>Contact List</title>    
+</head>
+
+<body>
+    <!-- Trigger/Open The Modal -->
+<!--<button id="myBtn">Open Modal</button>-->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+        <span class="close">&times;</span>
+    
+    <form name="contactForm" id="contactForm">
+            <div class="itemlabel">
+                First Name
+            </div>
+            <div class="itemvalue">
+                <input type="text" name="fName" id="fName">
+                <span class="error" id="fnameError" style="display:none"></span>   
+            </div>
+            <div class="itemlabel">
+                Last Name
+            </div>
+            <div class="itemvalue">
+                <input type="text" name="lName" id="lName">   
+                <span class="error" id="lnameError" style="display:none"></span>
+            </div>
+            <div class="itemlabel">
+                Email
+            </div>
+            <div class="itemvalue">
+                <input type="text" name="email" id="email">   
+                <span class="error" id="emailError"  style="display:none"></span>
+            </div>
+            <div class="itemlabel">
+                Phone Number
+            </div>
+            <div class="itemvalue">
+                <input type="text" name="phnNumber" id="phnNumber">
+                <span class="error" id="phnNumberError" style="display:none"></span>   
+            </div>
+            <div class="itemlabel">
+                Status
+            </div>
+            <div class="itemvalue">
+                <input type="checkbox" checked="true" name="status" id="status">   
+            </div>
+            <div class="itemlabel">&nbsp;</div>
+            <div class="itemvalue">
+                <input type="hidden" name="editIndex" id="editIndex">
+                <input type="hidden" name="opIndex" id="opIndex" value="ADD">
+                <div id="addButton">
+                    <input type="reset" class="buttonSubmit" value="Reset" name="reset" id="reset">
+                    <input type="button" class="buttonSubmit" onclick="getFormValues();" value="Submit" name="submit" id="submit">   
+                </div>
+                <div id="editButton">
+                    <input type="button" class="buttonCancel" onclick="cancelupdate();" value="Cancel" name="cancel" id="cancel">
+                    <input type="button" class="buttonSubmit" onclick="getFormValues();" value="Update" name="update" id="update">   
+                </div>    
+            </div>        
+        </form>
+  </div>
+
+</div>
+<div class="headerdiv">Contact List Management</div>
+<div class="contactListContainer">
+        <div class="row tableheader">
+            <div class="left">Contact List</div>
+            <div class="blank"></div>
+            <div class="blank"></div>
+            <div class="blank"></div>
+            <div class="blank"></div>
+            <div class="blank"></div>
+            <div class="right"><span id="myBtn" class="myBtn">+Add Contact</span></div>
+        </div>
+        <div class="row tableheader">
+            <div class="left">S.No</div>
+            <div class="middle">First Name</div>
+            <div class="middle">Last Name</div>
+            <div class="middle">Email</div>
+            <div class="middle">Phone</div>
+            <div class="middle">Status</div>
+            <div class="right">operation</div>
+        </div>
+
+        <div class="scrollBar">     
+            <div id="contactListContainer">
+
+            </div>
+        </div>
+</div>
+<div class="norecordmessagediv">No records found , Please Click on '+Add Contact' to add new records</div>
+<div class="footerdiv"> ©Submitted by Prashant Kulkarni</div>
+<div id="myDeleteModal" class="modal">
+    <div class="modal-content">
+        <form name="deleteForm" id="deleteForm">
+            <div class="messageAlign">
+                    Are you sure you want to delete
+            </div>
+            <div class="itemvalue buttonaligned">
+                <input type="hidden" name="deleteIndex" id="deleteIndex">
+                <input type="button" class="buttonCancel" value ="Cancel" onclick="canceldelete();" name="cancelDelete" id="cancelDelete">
+                <input type="button" class="buttonSubmit" value ="Delete" onclick="deleteContact();" name="Delete" id="deleterecord">   
+            </div>
+        </form>    
+        <!--<span class="close">&times;</span>-->
+    </div>
+</div>
+    
+
+</body>
+<script type="text/javascript">
+
+getContactList(this.contactArray);
+
+</script>
+
+</html>
