@@ -8,7 +8,7 @@ Submitted By Prashant kulkarni.
 
 1. HOW TO RUN PROJECT
 
-     Download index.html , contact.js contact.css on local machine and put all 3 files in same folder .
+     Download index.html , contact.js , contact.css on local machine and put all 3 files in same folder .
      
      Right click on index.html file and select open with option and then select chrome option.
      
