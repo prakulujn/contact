@@ -8,8 +8,8 @@ Submitted By Prashant kulkarni.
 
 1. HOW TO RUN PROJECT
 
-     Download contactnew.zip on local machine.
-     Extract zip file.
+     Download index.html , contact.js contact.css on local machine and put all 3 files in same folder .
+     
      Right click on index.html file and select open with option and then select chrome option.
      
     ** To Run this Project open index.html file in chrome.******
