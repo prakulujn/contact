@@ -13,4 +13,12 @@ Contact.txt file should save as contact.js file before run this project
 2. Internet should be on  to run this project because button CSS included from external source.
 3. hOW TO RUN PROJECT
 
-To run this project open index.html file in chrome.
+Download index.html , contact.js contact.css on local machine and put all 3 files in same folder .
+     
+     Right click on index.html file and select open with option and then select chrome option.
+     
+    ** To Run this Project open index.html file in chrome.******
+    
+Please let me know if you have more quesries.
+
+
